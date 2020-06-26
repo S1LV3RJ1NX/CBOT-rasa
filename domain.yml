@@ -1,0 +1,348 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- start
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- query
+- stack_check
+- about_c
+- c_data_types
+- know_integer
+- know_all_ranges
+- know_float
+- know_char
+- know_void
+- know_variable
+- know_variable_declaration
+- know_conditions
+- know_loops
+- know_for_loops
+- know_while_loops
+- know_do_while_loops
+- break_loops
+- continue_loops
+- programming
+- c_features
+- errors
+- semantic_errors
+- syntax_errors
+- runtime_errors
+- linker_errors
+- logical_errors
+- reserved_words
+- identifiers
+- switch_case
+- operators
+- arithmetic_operators
+- relational_operators
+- logical_operators
+- bitwise_operators
+- assignment_operators
+- conditional_operators
+- special_operators
+entities:
+- stack_query
+slots:
+  requested_slot:
+    type: unfeaturized
+  stack_query:
+    type: unfeaturized
+    auto_fill: false
+responses:
+  utter_wait:
+  - text: Please wait fecting top 3 responses..!!
+  utter_greet:
+  - text: Hey! I am CBot designed to solve your quries related to C programming language.
+      How may I help you?
+  utter_thanks:
+  - text: Hope your Query was solved..!!
+  utter_ask_stack:
+  - text: Do you want to check on stack overflow in case your query was not solved?
+  utter_refactor_query:
+  - text: "You may want to rewrite your query in structured way so as to get good\
+      \ and relevant response.\n For e.g: instead of asking tell me something about\
+      \ for loop, you may write your query as: How to declare for loop in C\n"
+  utter_ask_query:
+  - text: "Ask Query in format => Query: <Your Query here>\n"
+  utter_wrong_query:
+  - text: "Entered query is wrong.\nPlease enter in following format => Query: <Your\
+      \ Query here>\n"
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_C_history:
+  - text: "• C language is a structure/procedure oriented, middle level programming\
+      \ language developed at Bell Laboratories in 1972 by Dennis Ritchie.\n • C language\
+      \ was invented for implementing UNIX operating system.\n • In 1978, Dennis Ritchie\
+      \ and Brian Kernighan published the first edition “The C Programming Language”.\n\
+      \ • Operating systems, C compiler and all UNIX application programs are written\
+      \ in C language"
+  utter_data_types:
+  - image: https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113115600/DatatypesInC.png
+    text: "• C language has following data types. \n• Int – Represent the number (integer)\
+      \ • Float – Number with a fraction part. \n• Double – Double-precision floating-point\
+      \ value \n• Char – Single character  \n• Void – Special purpose type without\
+      \ any value.  \n• The image will give you the complete picture"
+  utter_integer_info:
+  - text: "• Integer data type allows a variable to store numeric values. \n• “int”\
+      \ keyword is used to refer integer data type. • The storage size of int data\
+      \ type is 2 or 4 or 8 byte. \n• It varies depend upon the processor in the CPU\
+      \ that we use. If we are using 16 bit processor, 2 byte  (16 bit) of memory\
+      \ will be allocated for int data type \n• Like wise, 4 byte (32 bit) of memory\
+      \ for 32 bit processor and 8 byte (64 bit) of memory for 64 bit  allocated for\
+      \ int datatype. \n• int (2 byte) can store values from -32,768 to +32,767\n\
+      \ • int (4 byte) can store values from -2,147,483,648 to +2,147,483,647. \n\
+      • If you want to use the integer value that crosses the above limit, you can\
+      \ go for “long int” and “long long int” for which the limits are very high.\
+      \ \n• Note:-\n • We can’t store decimal values using int data type.\n • If we\
+      \ use int data type to store decimal values, decimal values will be truncated\
+      \ and we will get only whole number.\n • In this case, float data type can be\
+      \ used to store decimal values in a variable."
+  utter_all_ranges:
+  - image: https://1.bp.blogspot.com/-eoSq_7z2Nx4/VL4bwD5RD-I/AAAAAAAADmE/BEAv36yhilQ/s1600/Data%2BTypes%2Bin%2BC%2BRivisited%2B2.jpg
+    text: The image shall give you ranges of all frequently used data types
+  utter_float_info:
+  - image: https://imgur.com/bWCZaJ7.png
+    text: The image will give the floating point information
+  utter_char_info:
+  - image: https://imgur.com/pM6Nji2.png
+    text: The image shall give info about character datatype
+  utter_void_info:
+  - text: Void is an empty data type that has no value. This can be used in  and pointers.
+  utter_variable_info:
+  - text: "• C variable is a named location in a memory where a program can manipulate\
+      \ the data.\n • This location is used to hold the value of the variable.\n •\
+      \ The value of the C variable may get change in the program.\n • C variable\
+      \ might be belonging to any of the data type like int, float, char etc.\n• RULES\
+      \ FOR NAMING C VARIABLE =>\n    1) Variable name must begin with letter or underscore.\n\
+      \    2) Variables are case sensitive\n    3) They can be constructed with digits,\
+      \ letters.\n    4) No special symbols are allowed other than underscore.\n \
+      \   e.g:- sum, height, _value"
+  utter_variable_declaration_info:
+  - image: https://imgur.com/U8TNABx.png
+    text: "• The image shall give variable declaration info\n • Variables should be\
+      \ declared in the C program before to use. \n • Memory space is not allocated\
+      \ for a variable while declaration. It happens only on variable definition.\
+      \  \n • Variable initialization means assigning a value to the variable."
+  utter_conditions_info:
+  - image: https://imgur.com/AXGGb1p.png
+    text: "• The image shall give if else condition info\n• There are 3 types of decision\
+      \ making control statements in C language. They are,  1) if statements  \n2)\
+      \ if else statements \n3) nested if statements\n"
+  utter_loops_info:
+  - image: https://www.studytonight.com/c/images/loops-in-c.jpg
+    text: • Loop control statements in C are used to perform looping operations until
+      the given condition is true.  • Control comes out of the loop statements once
+      condition becomes false.  • There are 3 types of loop control statements in
+      C language. They are:- for, while, do-while  • Know the flow chart here:-
+  utter_for_loops_info:
+  - image: https://i.imgur.com/5n6ZOLX.png
+    text: "• The image shall give syntax of for loop. \n• for loop is used to execute\
+      \ a set of statements repeatedly until a particular condition is satisfied.\
+      \ \n• We can say it is an open ended loop.\n• In for loop we have exactly two\
+      \ semicolons, one after initialization and second after the condition. \n• In\
+      \ this loop we can have more than one initialization or increment/decrement,\
+      \ separated using comma operator. But it can have only one condition. \n• The\
+      \ for loop is executed as follows:-\n    - It first evaluates the initialization\
+      \ code.\n    - Then it checks the condition expression.\n    - If it is true,\
+      \ it executes the for-loop body.\n    - Then it evaluate the increment/decrement\
+      \ condition and again follows from step 2.\n    - When the condition expression\
+      \ becomes false, it exits the loop."
+  utter_while_loops_info:
+  - image: https://i.imgur.com/iaiRW50.png
+    text: "• The image shall give synatx of while loop. \n•while loop can be addressed\
+      \ as an entry control loop. It is completed in 3 steps."
+  utter_do_while_loops_info:
+  - image: https://i.imgur.com/sMNNnh8.png
+    text: "• The image shall give synatx of while loop. \n• In some situations it\
+      \ is necessary to execute body of the loop before testing the condition. \n\
+      • Such situations can be handled with the help of do-while loop. do statement\
+      \ evaluates the body of the loop first and at the end, the condition is checked\
+      \ using while statement. \n•It means that the body of the loop will be executed\
+      \ at least once, even though the starting condition inside while is initialized\
+      \ to be false."
+  utter_break_loops:
+  - image: https://www.studytonight.com/c/images/break-statement-in-loops.gif
+    text: "• Sometimes, while executing a loop, it becomes necessary to skip a part\
+      \ of the loop or to leave the loop as soon as certain condition becomes true.\
+      \ This is known as jumping out of loop. 1) break statement:\n    When break\
+      \ statement is encountered inside a loop, the loop is immediately exited and\
+      \ the program continues with the statement immediately following the loop.\n"
+  utter_continue_loops:
+  - image: https://www.studytonight.com/c/images/continue-statement-in-loops.gif
+    text: It causes the control to go directly to the test-condition and then continue
+      the loop process. On encountering continue, cursor leave the current cycle of
+      loop, and starts with the next cycle.
+  utter_programming:
+  - text: Programming is the process of creating a set of instructions that tell a
+      computer how to perform a task. Programming can be done using a variety of computer
+      programming languages, such as JavaScript, Python, and C++.
+  utter_cfeatures:
+  - text: '1] Portability: It is a platform-independent language.  2] Modularity:
+      Possibility to break down large programs into small modules.  3] Flexibility:
+      The possibility of a programmer to control the language. 4] Speed: C comes with
+      support for system programming and hence it compiles and executes with high
+      speed when compared with other high-level languages.  5] Extensibility: Possibility
+      to add new features by the programmer.'
+  utter_errors:
+  - text: 'Errors are the problems or the faults that occur in the program, which
+      makes the behavior of the program abnormal, and experienced developers can also
+      make these faults. Programming errors are also known as the bugs or faults,
+      and the process of removing these bugs is known as debugging. These errors are
+      detected either during the time of compilation or execution. Thus, the errors
+      must be removed from the program for the successful execution of the program.
+      There are mainly five types of errors exist in C programming: 1]  Syntax error
+      2] Run-time error 3]  Linker error 4]  Logical error 5]  Semantic error'
+  utter_syntaxerrors:
+  - text: "Syntax errors are also known as the compilation errors as they occurred\
+      \ at the compilation time, or we can say that the syntax errors are thrown by\
+      \ the compilers. These errors are mainly occurred due to the mistakes while\
+      \ typing or do not follow the syntax of the specified programming language.\
+      \ These mistakes are generally made by beginners only because they are new to\
+      \ the language. These errors can be easily debugged or corrected.  For example:\
+      \ If we want to declare the variable of type integer,\n    int a; // this is\
+      \ the correct form\n    Int a; // this is an incorrect form.\nCommonly occurred\
+      \ syntax errors are: 1] If we miss the parenthesis (}) while writing the code.\
+      \ 2] Displaying the value of a variable without its declaration. 3] If we miss\
+      \ the semicolon (;) at the end of the statement. \""
+  utter_runtimeerrors:
+  - text: "Sometimes the errors exist during the execution-time even after the successful\
+      \ compilation known as run-time errors.\nWhen the program is running, and it\
+      \ is not able to perform the operation is the main cause of the run-time error.\n\
+      The division by zero is the common example of the run-time error.\nThese errors\
+      \ are very difficult to find, as the compiler does not point to these errors."
+  utter_linkererrors:
+  - text: Linker errors are mainly generated when the executable file of the program
+      is not created.  This can be happened either due to the wrong function prototyping
+      or usage of the wrong header file.  For example, the main.c file contains the
+      sub() function whose declaration and definition is done in some other file such
+      as func.c.  During the compilation, the compiler finds the sub() function in
+      func.c file, so it generates two object files, i.e., main.o and func.o.  At
+      the execution time, if the definition of sub() function is not found in the
+      func.o file, then the linker error will be thrown.  The most common linker error
+      that occurs is that we use Main() instead of main().
+  utter_logicalerrors:
+  - text: The logical error is an error that leads to an undesired output.   These
+      errors produce the incorrect output, but they are error-free, known as logical
+      errors.  These types of mistakes are mainly done by beginners. The occurrence
+      of these errors mainly depends upon the logical thinking of the developer.   If
+      the programmers sound logically good, then there will be fewer chances of these
+      errors.
+  utter_semanticerrors:
+  - text: "Semantic errors are the errors that occurred when the statements are not\
+      \ understandable by the compiler. The following can be the cases for the semantic\
+      \ error: 1] Use of a un-initialized variable.\n    int i;\n    i=i+2;\n2] Type\
+      \ compatibility\n    int b = 'javatpoint';\n3] Errors in expressions\n    int\
+      \ a, b, c; a+b = c;\n4] Array index out of bound\n    int a[10];\n    a[10]\
+      \ = 34;"
+  utter_reservedwords:
+  - text: In C, we have 32 keywords, which have their predefined meaning and cannot
+      be used as a variable name. These words are also known as “reserved words”.
+      It is good practice to avoid using these keywords as variable name. ex.:- auto,
+      int, float, char, if, else, for, while, struct, union, enum, etc
+  utter_identifiers:
+  - text: "In C language identifiers are the names given to variables, constants,\
+      \ functions and user-define data. These identifier are defined against a set\
+      \ of rules.\n* Rules for an Identifier\n    - An Identifier can only have alphanumeric\
+      \ characters(a-z , A-Z , 0-9) and underscore(_).\n    - The first character\
+      \ of an identifier can only contain alphabet(a-z , A-Z) or underscore (_).\n\
+      \    - Identifiers are also case sensitive in C. For example name and Name are\
+      \ two different identifiers in C.\n    - Keywords are not allowed to be used\
+      \ as Identifiers.\n    - No special characters, such as semicolon, period, whitespaces,\
+      \ slash or comma are permitted to be used in or as Identifier."
+  utter_switchcase:
+  - image: https://i.imgur.com/e5g1kWx.png
+    text: "• Above image shall give synatx of switch case. \n • The switch statement\
+      \ allows us to execute one code block among many alternatives.\nYou can do the\
+      \ same thing with the if...else..if ladder. However, the syntax of the switch\
+      \ statement is much easier to read and write.  "
+  utter_operators:
+  - text: "- C language supports a rich set of built-in operators. An operator is\
+      \ a symbol that tells the compiler to perform a certain mathematical or logical\
+      \ manipulation. - Operators are used in programs to manipulate data and variables.\
+      \ - C operators can be classified into following types:\n    - Arithmetic operators\
+      \ , Relational operators , Logical operators , Bitwise operators, Assignment\
+      \ operators, Conditional operators, Special operators"
+  utter_arithmeticoperators:
+  - text: C supports all the basic arithmetic operators. Like +,-,*,/
+  utter_relationaloperators:
+  - text: Use for condition evaluation like <,>,<=,>=,==,!=
+  utter_logicaloperators:
+  - text: '3 logical operators: logical AND(&&), logical OR(||), logical NOT(!)'
+  utter_bitwiseoperators:
+  - text: 'Perform bit manipulation like: leftshift(>>), rightshift(<<), bitwise and(&),
+      bitwise or(|), bitwise xor (^)'
+  utter_assignmentoperators:
+  - text: Assign RHS value to LHS value. e.x:- a = 10; a -= b; a += b; etc
+  utter_conditionaloperators:
+  - text: "The conditional operators in C language are known by two more names \n\
+      1] Ternary Operator  \n2]  ? : Operator\nIt is actually the if condition that\
+      \ we use in C language decision making, but using conditional operator, we turn\
+      \ the if condition statement into a short and simple operator. The syntax of\
+      \ a conditional operator is :\n    expression 1 ? expression 2: expression 3\n\
+      Explanation:\n    - The question mark '?' in the syntax represents the if part.\n\
+      \    - The first expression (expression 1) generally returns either true or\
+      \ false, based on which it is decided whether (expression 2) will be executed\
+      \ or (expression 3)\n    - If (expression 1) returns true then the expression\
+      \ on the left side of ' : ' i.e (expression 2) is executed.\n    - If (expression\
+      \ 1) returns false then the expression on the right side of ' : ' i.e (expression\
+      \ 3) is executed."
+  utter_specialoperators:
+  - text: "1] sizeof:-\n    Returns the size of an variable.\n    e.x:- sizeof(x)\
+      \ // return size of the variable x\n2] & (amoersand):-\n    Returns the address\
+      \ of an variable\n    e.x:- &x;\n3] *\n    Pointer to a variable *x ;"
+actions:
+- utter_greet
+- utter_thanks
+- utter_ask_stack
+- utter_refactor_query
+- utter_ask_query
+- utter_wrong_query
+- utter_goodbye
+- utter_iamabot
+- utter_C_history
+- utter_data_types
+- utter_integer_info
+- utter_all_ranges
+- utter_float_info
+- utter_char_info
+- utter_void_info
+- utter_variable_info
+- utter_variable_declaration_info
+- utter_conditions_info
+- utter_loops_info
+- utter_for_loops_info
+- utter_while_loops_info
+- utter_do_while_loops_info
+- utter_break_loops
+- utter_continue_loops
+- utter_programming
+- utter_cfeatures
+- utter_errors
+- utter_syntaxerrors
+- utter_runtimeerrors
+- utter_linkererrors
+- utter_logicalerrors
+- utter_semanticerrors
+- utter_reservedwords
+- utter_identifiers
+- utter_switchcase
+- utter_operators
+- utter_arithmeticoperators
+- utter_relationaloperators
+- utter_logicaloperators
+- utter_bitwiseoperators
+- utter_assignmentoperators
+- utter_conditionaloperators
+- utter_specialoperators
+- utter_wait
+forms:
+- stack_overflow_form
