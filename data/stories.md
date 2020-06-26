@@ -513,7 +513,7 @@
 * deny
     - utter_thanks
 
-## New Story
+## New Story1
 
 * break_loops
     - utter_break_loops
@@ -531,7 +531,7 @@
 * goodbye
     - utter_thanks
 
-## New Story
+## New Story2
 
 * know_char
     - utter_char_info
@@ -539,7 +539,7 @@
 * deny
     - utter_thanks
 
-## New Story
+## New Story3
 
 * greet
     - utter_greet
