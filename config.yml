@@ -1,5 +1,6 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
+PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/dist-packages
 language: en
 pipeline:
   - name: WhitespaceTokenizer
