@@ -56,7 +56,7 @@ responses:
   utter_wait:
   - text: Please wait fecting top 3 responses..!!
   utter_greet:
-  - text: Hey! I am CBot designed to solve your quries related to C programming language.
+  - text: Hey! I am CBot designed to solve your queries related to C programming language.
       How may I help you?
   utter_thanks:
   - text: Hope your Query was solved..!!
@@ -67,10 +67,10 @@ responses:
       \ and relevant response.\n For e.g: instead of asking tell me something about\
       \ for loop, you may write your query as: How to declare for loop in C\n"
   utter_ask_query:
-  - text: "Ask Query in format => Query: <Your Query here>\n"
+  - text: 'Ask Query in format: Query: Your Query here'
   utter_wrong_query:
-  - text: "Entered query is wrong.\nPlease enter in following format => Query: <Your\
-      \ Query here>\n"
+  - text: 'Entered query is wrong.Please enter in following format: Query: Your Query
+      Here'
   utter_goodbye:
   - text: Bye
   utter_iamabot:
