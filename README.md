@@ -1,6 +1,10 @@
 # CBOT
 A Chatbot made using the RASA Conversational AI to solve user queries related to C language.
 
+It answers through 2 modes:
+* Trained NLU Data
+* Stackoverflow API
+
 The Chatbot is designed so that it can answer the Basic queries related to C through it's trained NLU Data.
 It can answer queries related to:
 * Programming
